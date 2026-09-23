@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عقارات شنكال | السياسات القانونية</title>
+  <meta name="description" content="سياسة الخصوصية وشروط الاستخدام لتطبيق عقارات شنكال" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body dir="rtl">
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">ع</div>
+        <div class="brand-text">
+          <strong>عقارات شنكال</strong>
+          <span>Shingal Properties</span>
+        </div>
+      </a>
+      <div class="actions">
+        <button type="button" class="btn active" id="btn-ar" onclick="setLang('ar')">العربية</button>
+        <button type="button" class="btn" id="btn-en" onclick="setLang('en')">English</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow" data-ar="صفحات عامة للمتاجر" data-en="Public store pages">صفحات عامة للمتاجر</span>
+      <h1 data-ar="السياسات القانونية" data-en="Legal policies">السياسات القانونية</h1>
+      <p class="lead" data-ar="روابط سياسة الخصوصية وشروط الاستخدام لتطبيق عقارات شنكال — لاستخدامها في Google Play و App Store." data-en="Privacy Policy and Terms of Use for Shingal Properties — for Google Play and App Store listings.">روابط سياسة الخصوصية وشروط الاستخدام لتطبيق عقارات شنكال — لاستخدامها في Google Play و App Store.</p>
+    </section>
+
+    <div class="links">
+      <a class="link-card" href="privacy.html">
+        <strong data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</strong>
+        <span data-ar="كيف نجمع البيانات ونستخدمها ونحميها، وحق حذف الحساب." data-en="How we collect, use, and protect data, including account deletion.">كيف نجمع البيانات ونستخدمها ونحميها، وحق حذف الحساب.</span>
+      </a>
+      <a class="link-card" href="terms.html">
+        <strong data-ar="شروط الاستخدام" data-en="Terms of Use">شروط الاستخدام</strong>
+        <span data-ar="قواعد استخدام المنصة والمحتوى والمسؤوليات." data-en="Rules for using the platform, content, and responsibilities.">قواعد استخدام المنصة والمحتوى والمسؤوليات.</span>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <span data-ar="المعرف: com.barzandawood.aqarly" data-en="App ID: com.barzandawood.aqarly">المعرف: com.barzandawood.aqarly</span>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      const isAr = lang === 'ar';
+      document.documentElement.lang = isAr ? 'ar' : 'en';
+      document.body.dir = isAr ? 'rtl' : 'ltr';
+      document.getElementById('btn-ar').classList.toggle('active', isAr);
+      document.getElementById('btn-en').classList.toggle('active', !isAr);
+      document.querySelectorAll('[data-ar]').forEach((el) => {
+        el.textContent = isAr ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+      });
+      document.title = isAr
+        ? 'عقارات شنكال | السياسات القانونية'
+        : 'Shingal Properties | Legal policies';
+    }
+  </script>
+</body>
+</html>

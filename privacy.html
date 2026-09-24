@@ -50,8 +50,9 @@
           <ul>
             <li><strong>الحساب والهوية:</strong> الاسم، الاسم الظاهر، البريد الإلكتروني، رقم الهاتف، صورة الملف ومعرّف Firebase.</li>
             <li><strong>المصادقة:</strong> تسجيل البريد وكلمة المرور أو Google أو Apple عبر Firebase Authentication. لا نخزن كلمة مرورك بنص مقروء على خوادم التطبيق.</li>
-            <li><strong>النشاط والمحتوى:</strong> المفضلة، طلبات العقارات والنشر، الإعلانات والصور، المحادثات، فرص التعاون، البلاغات وتذاكر الدعم.</li>
+            <li><strong>النشاط والمحتوى:</strong> المفضلة، طلبات العقارات والنشر، عروض العقارات والصور، المحادثات، فرص التعاون، البلاغات وتذاكر الدعم.</li>
             <li><strong>العقار أو المكتب:</strong> العنوان، بيانات الاتصال، روابط التواصل والموقع الذي تُدخله اختيارياً كرابط خريطة أو إحداثيات.</li>
+            <li><strong>دفتر المكتب:</strong> بيانات الإيجارات والديون والمصاريف والإيرادات والعقارات الإدارية، وقد تشمل اسم المستأجر أو المالك أو المشتري ورقم هاتفه عندما يُدخل المكتب هذه البيانات لإدارة أعماله.</li>
             <li><strong>التحقق من المكتب:</strong> صورة المالك، بطاقة الهوية وإجازة المكتب عند التقدم للاعتماد. تحفظ كمستندات خاصة للمراجعة الإدارية.</li>
             <li><strong>البيانات التقنية:</strong> رمز إشعارات FCM، عنوان IP، نوع المتصفح أو الجهاز، وسجلات الدخول والأمان والأخطاء التشغيلية.</li>
             <li><strong>بيانات محلية:</strong> تفضيلات اللغة والمظهر وبيانات الجلسة المحفوظة على جهازك.</li>
@@ -63,13 +64,13 @@
         </div>
         <div class="section">
           <h2>4. كيف نستخدم البيانات</h2>
-          <p>نستخدم البيانات لإنشاء الحساب وتأمينه، تشغيل الإعلانات والطلبات والمحادثات، التحقق من المكاتب، معالجة الدعم والبلاغات، إرسال الإشعارات التي تختار تفعيلها، منع الاحتيال وإساءة الاستخدام، صيانة الخدمة، والوفاء بالالتزامات القانونية.</p>
+          <p>نستخدم البيانات لإنشاء الحساب وتأمينه، تشغيل عروض العقارات والطلبات والمحادثات، التحقق من المكاتب، معالجة الدعم والبلاغات، إرسال الإشعارات التي تختار تفعيلها، منع الاحتيال وإساءة الاستخدام، صيانة الخدمة، والوفاء بالالتزامات القانونية.</p>
         </div>
         <div class="section">
           <h2>5. المشاركة ومزودو الخدمة</h2>
-          <p><strong>لا نبيع بياناتك ولا نستخدمها للإعلانات الموجهة أو التتبع عبر تطبيقات أخرى.</strong> قد نشارك الحد اللازم:</p>
+          <p><strong>لا نبيع بياناتك ولا نستخدمها للتسويق الموجه أو التتبع عبر تطبيقات أخرى.</strong> قد نشارك الحد اللازم:</p>
           <ul>
-            <li>مع المستخدمين أو المكاتب التي تتواصل معها، أو ضمن إعلان ومعلومات مكتب اخترت نشرها.</li>
+            <li>مع المستخدمين أو المكاتب التي تتواصل معها، أو ضمن عرض عقاري ومعلومات مكتب اخترت نشرها.</li>
             <li>مع الإدارة لمراجعة المكاتب والمحتوى والبلاغات والدعم.</li>
             <li>مع Google Firebase للمصادقة والإشعارات، وGoogle أو Apple عند استخدام تسجيل الدخول الخاص بهما.</li>
             <li>مع مزود الاستضافة وCloudflare عند تخزين أو تقديم الصور عبر R2/CDN.</li>
@@ -78,11 +79,11 @@
         </div>
         <div class="section">
           <h2>6. البيانات العامة واختياراتك</h2>
-          <p>قد تكون الإعلانات وصور العقارات واسم المكتب وشعاره وعنوانه ووسائل اتصاله وموقعه ظاهرة للعامة. تظهر بيانات أخرى فقط للأطراف اللازمة لتنفيذ الميزة. لا ترفع وثائق أو صوراً أو بيانات لأشخاص آخرين ما لم تكن مخولاً بذلك.</p>
+          <p>قد تكون عروض العقارات وصورها واسم المكتب وشعاره وعنوانه ووسائل اتصاله وموقعه ظاهرة للعامة. تظهر بيانات أخرى فقط للأطراف اللازمة لتنفيذ الميزة. لا ترفع وثائق أو صوراً أو بيانات لأشخاص آخرين ما لم تكن مخولاً بذلك.</p>
         </div>
         <div class="section">
           <h2>7. الاحتفاظ والحذف</h2>
-          <p>نحتفظ ببيانات الحساب والمحتوى أثناء نشاط الحساب وبالقدر اللازم لتقديم الخدمة. عند حذف الحساب تُحذف بيانات الحساب والمحتوى والوسائط المرتبطة به من الأنظمة النشطة وفق علاقات النظام. قد تبقى لفترة محدودة نسخ احتياطية دورية أو سجلات أمنية لازمة لمنع الاحتيال أو تنفيذ التزام قانوني، ثم تُحذف أو تُفصل عن الهوية عندما تنتفي الحاجة.</p>
+          <p>نحتفظ ببيانات الحساب والمحتوى أثناء نشاط الحساب وبالقدر اللازم لتقديم الخدمة. عند حذف الحساب تُحذف بيانات الحساب والمحتوى والوسائط المرتبطة به من الأنظمة النشطة وفق علاقات النظام. قد تبقى النسخ الاحتياطية المشفرة لمدة أقصاها 30 يوماً، وتُحفظ سجلات الأمان التي قد تتضمن عنوان IP ونوع الجهاز لمدة أقصاها 90 يوماً، ثم تُحذف آلياً أو تُفصل عن الهوية. قد نحتفظ بسجل محدد مدة أطول فقط عند وجود التزام قانوني أو حادث أمني جارٍ.</p>
         </div>
         <div class="section">
           <h2>8. حقوقك وحذف الحساب</h2>
@@ -94,7 +95,7 @@
         </div>
         <div class="section">
           <h2>10. إشعارات الدفع</h2>
-          <p>بعد موافقتك قد نرسل إشعارات عن الطلبات والمحادثات والتعاون وتحديثات الخدمة. يمكنك تعطيلها من إعدادات نظام جهازك. نستخدم رمز الجهاز لهذا الغرض ولا نستخدمه للإعلانات.</p>
+          <p>بعد موافقتك قد نرسل إشعارات عن الطلبات والمحادثات والتعاون وتحديثات الخدمة. يمكنك تعطيلها من إعدادات نظام جهازك. نستخدم رمز الجهاز لهذا الغرض ولا نستخدمه للتسويق.</p>
         </div>
         <div class="section">
           <h2>11. خصوصية الأطفال</h2>
@@ -123,6 +124,7 @@
             <li><strong>Authentication:</strong> email/password, Google, or Apple sign-in through Firebase Authentication. We do not store your password in readable form on the app servers.</li>
             <li><strong>Activity and content:</strong> favorites, property and publication requests, listings and images, chats, collaboration opportunities, reports, and support tickets.</li>
             <li><strong>Property or office data:</strong> address, contact and social links, and an optional map link or coordinates that you enter.</li>
+            <li><strong>Office ledger:</strong> rent, debt, expense, income, and internally managed property records. These may include a tenant, owner, or buyer name and phone number when an office enters them to manage its business.</li>
             <li><strong>Office verification:</strong> owner photo, ID card, and office license when applying for approval. These are kept as private documents for admin review.</li>
             <li><strong>Technical data:</strong> FCM push token, IP address, browser or device type, and login, security, and operational error logs.</li>
             <li><strong>Local data:</strong> language, theme, and session preferences stored on your device.</li>
@@ -138,7 +140,7 @@
         </div>
         <div class="section">
           <h2>5. Sharing and service providers</h2>
-          <p><strong>We do not sell your data or use it for targeted advertising or cross-app tracking.</strong> We may share only what is necessary:</p>
+          <p><strong>We do not sell your data or use it for targeted marketing or cross-app tracking.</strong> We may share only what is necessary:</p>
           <ul>
             <li>With users or offices you interact with, or in a listing or office profile you chose to publish.</li>
             <li>With administrators reviewing offices, content, reports, and support.</li>
@@ -153,7 +155,7 @@
         </div>
         <div class="section">
           <h2>7. Retention and deletion</h2>
-          <p>We retain account data and content while the account is active and as needed to provide the service. Deleting an account removes its related account data, content, and media from active systems according to system relationships. Periodic backups or limited security records may remain temporarily to prevent fraud or meet legal obligations, and are deleted or de-identified when no longer needed.</p>
+          <p>We retain account data and content while the account is active and as needed to provide the service. Deleting an account removes related account data, content, and media from active systems according to system relationships. Encrypted backups may remain for no more than 30 days. Security logs that may include an IP address and device type are retained for no more than 90 days, then automatically deleted or de-identified. A specific record may be kept longer only for a legal obligation or an ongoing security incident.</p>
         </div>
         <div class="section">
           <h2>8. Your rights and account deletion</h2>
@@ -165,7 +167,7 @@
         </div>
         <div class="section">
           <h2>10. Push notifications</h2>
-          <p>With your permission, we may send updates about requests, chats, collaboration, and the service. You can disable notifications in your device settings. The device token is used for this purpose and not for advertising.</p>
+          <p>With your permission, we may send updates about requests, chats, collaboration, and the service. You can disable notifications in your device settings. The device token is used for this purpose and not for marketing.</p>
         </div>
         <div class="section">
           <h2>11. Children's privacy</h2>

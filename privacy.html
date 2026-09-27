@@ -31,7 +31,7 @@
       <span class="eyebrow" data-ar="وثيقة عامة" data-en="Public document">وثيقة عامة</span>
       <h1 data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</h1>
       <p class="lead" data-ar="توضح هذه السياسة كيف تتعامل إدارة تطبيق عقارات شنكال مع بياناتك عند استخدام التطبيق والموقع والخدمات المرتبطة بهما." data-en="This policy explains how the Shingal Properties app administration handles your data when you use the app, website, and related services.">توضح هذه السياسة كيف تتعامل إدارة تطبيق عقارات شنكال مع بياناتك عند استخدام التطبيق والموقع والخدمات المرتبطة بهما.</p>
-      <p class="meta" data-ar="تاريخ السريان: 26 سبتمبر 2026 · التطبيق: عقارات شنكال" data-en="Effective: September 26, 2026 · App: Shingal Properties">تاريخ السريان: 26 سبتمبر 2026 · التطبيق: عقارات شنكال</p>
+      <p class="meta" data-ar="تاريخ السريان: 27 سبتمبر 2026 · التطبيق: عقارات شنكال" data-en="Effective: September 27, 2026 · App: Shingal Properties">تاريخ السريان: 27 سبتمبر 2026 · التطبيق: عقارات شنكال</p>
     </section>
 
     <article class="card">
@@ -50,7 +50,8 @@
           <h2>2. البيانات التي نجمعها</h2>
           <ul>
             <li><strong>الحساب والهوية:</strong> الاسم، الاسم الظاهر، البريد الإلكتروني، رقم الهاتف، معرّف Firebase، وصورة الملف إن رُفعت.</li>
-            <li><strong>المصادقة:</strong> تسجيل البريد وكلمة المرور عبر Firebase Authentication. لا نخزن كلمة مرورك بنص مقروء على خوادم التطبيق.</li>
+            <li><strong>المصادقة:</strong> التسجيل وتسجيل الدخول بالبريد وكلمة المرور فقط عبر Firebase Authentication (بدون تسجيل عبر Google أو Apple). لا نخزن كلمة مرورك بنص مقروء على خوادم التطبيق.</li>
+            <li><strong>رموز التحقق (OTP):</strong> عند تأكيد البريد أو إعادة تعيين كلمة المرور نرسل رمزاً مكوّناً من 6 أرقام إلى بريدك عبر خدمة إرسال البريد (Resend). لا نستخدم روابط تأكيد منفصلة داخل التطبيق لهذه العمليات.</li>
             <li><strong>النشاط والمحتوى:</strong> المفضلة، طلبات العقارات والنشر (وقد تشمل اسم مالك العقار وهاتفه عند طلب النشر)، عروض العقارات والصور وروابط الفيديو الاختيارية، المحادثات، فرص التعاون، البلاغات وتذاكر الدعم.</li>
             <li><strong>العقار أو المكتب:</strong> العنوان النصي، بيانات الاتصال، روابط التواصل، و<strong>موقع الخريطة الاختياري</strong> (رابط خريطة أو إحداثيات تدخلها أنت أو المكتب يدوياً لعرض موقع العقار/المكتب فقط — انظر القسم 4).</li>
             <li><strong>دفتر المكتب:</strong> بيانات الإيجارات والديون والمصاريف والإيرادات والعقارات الإدارية داخل المكتب، وقد تشمل اسم المستأجر أو المالك أو المشتري ورقم هاتفه عندما يُدخل المكتب هذه البيانات لإدارة أعماله.</li>
@@ -83,8 +84,9 @@
           <p><strong>لا نبيع بياناتك ولا نستخدمها للتسويق الموجه أو التتبع عبر تطبيقات أخرى.</strong> قد نشارك الحد اللازم:</p>
           <ul>
             <li>مع المستخدمين أو المكاتب التي تتواصل معها، أو ضمن عرض عقاري ومعلومات مكتب اخترت نشرها (بما في ذلك موقع الخريطة الاختياري إن وُجد).</li>
-            <li>مع الإدارة لمراجعة المكاتب والمحتوى والبلاغات والدعم.</li>
-            <li>مع Google Firebase للمصادقة والإشعارات.</li>
+            <li>مع الإدارة لمراجعة المكاتب والمحتوى والبلاغات والدعم، ولربط مكتب معتمد بحساب بريد آخر عند الطلب.</li>
+            <li>مع Google Firebase للمصادقة (بريد/كلمة مرور) والإشعارات.</li>
+            <li>مع Resend لإرسال رسائل رمز التحقق إلى بريدك.</li>
             <li>مع مزود الاستضافة وCloudflare عند تخزين أو تقديم الصور عبر R2/CDN.</li>
             <li>مع جهة مختصة إذا أوجب القانون ذلك أو لحماية الحقوق والسلامة.</li>
           </ul>
@@ -92,18 +94,19 @@
         <div class="section">
           <h2>7. البيانات العامة واختياراتك</h2>
           <p>قد تكون عروض العقارات وصورها واسم المكتب وشعاره وعنوانه ووسائل اتصاله وموقع الخريطة الذي أُدخل للعقار أو المكتب ظاهرة للعامة. تظهر بيانات أخرى فقط للأطراف اللازمة لتنفيذ الميزة. لا ترفع وثائق أو صوراً أو بيانات لأشخاص آخرين ما لم تكن مخولاً بذلك.</p>
+          <p><strong>تغيير بريد المكتب المعتمد غير متاح من داخل التطبيق</strong>؛ يتم عبر الإدارة فقط بعد التحقق، لحماية ملكية المكتب والعقارات.</p>
         </div>
         <div class="section">
           <h2>8. الاحتفاظ والحذف</h2>
-          <p>نحتفظ ببيانات الحساب والمحتوى أثناء نشاط الحساب وبالقدر اللازم لتقديم الخدمة. عند حذف الحساب تُحذف بيانات الحساب والمحتوى والوسائط المرتبطة به من الأنظمة النشطة وفق علاقات النظام. قد تبقى النسخ الاحتياطية المشفرة لمدة أقصاها 30 يوماً، وتُحفظ سجلات الأمان التي قد تتضمن عنوان IP ونوع الجهاز لمدة أقصاها 90 يوماً، ثم تُحذف آلياً أو تُفصل عن الهوية. قد نحتفظ بسجل محدد مدة أطول فقط عند وجود التزام قانوني أو حادث أمني جارٍ.</p>
+          <p>نحتفظ ببيانات الحساب والمحتوى أثناء نشاط الحساب وبالقدر اللازم لتقديم الخدمة. عند حذف الحساب تُحذف بيانات الحساب والمحتوى والوسائط المرتبطة به من الأنظمة النشطة وفق علاقات النظام. قد تبقى النسخ الاحتياطية المشفرة لمدة أقصاها 30 يوماً، وتُحفظ سجلات الأمان التي قد تتضمن عنوان IP ونوع الجهاز لمدة أقصاها 90 يوماً، ثم تُحذف آلياً أو تُفصل عن الهوية. قد نحتفظ بسجل محدد مدة أطول فقط عند وجود التزام قانوني أو حادث أمني جارٍ. تُحذف رموز التحقق بعد استخدامها أو انتهاء صلاحيتها بوقت قصير.</p>
         </div>
         <div class="section">
           <h2>9. حقوقك وحذف الحساب</h2>
-          <p>يمكنك مراجعة بيانات ملفك وتحديثها وإدارة محتواك. للحذف من التطبيق: <strong>حسابي ← حذف الحساب ← اكتب «حذف» وأكد</strong>؛ ويشمل الطلب حساب Firebase وبيانات الخدمة المرتبطة. ويمكنك أيضاً استخدام <a href="delete-account.html">صفحة حذف الحساب العامة</a> أو مراسلة <a href="mailto:info@barzandawood.com">info@barzandawood.com</a>. قد نطلب التحقق من ملكية الحساب قبل تنفيذ طلب خارجي.</p>
+          <p>يمكنك مراجعة بيانات ملفك وتحديثها وإدارة محتواك. للحذف من التطبيق: <strong>حسابي ← حذف الحساب ← اكتب «حذف» وأكد</strong>؛ ويشمل الطلب حساب Firebase وبيانات الخدمة المرتبطة. ويمكنك أيضاً استخدام <a href="delete-account.html">صفحة حذف الحساب العامة</a> أو مراسلة <a href="mailto:info@barzandawood.com">info@barzandawood.com</a>. قد نطلب التحقق من ملكية الحساب قبل تنفيذ طلب خارجي. للاحتفاظ بالمكتب عند تغيير البريد تواصل مع الإدارة لربطه بحساب آخر بدل حذف المكتب.</p>
         </div>
         <div class="section">
           <h2>10. الأمان ونقل البيانات</h2>
-          <p>نستخدم اتصال HTTPS، ومصادقة Firebase، وصلاحيات وصول حسب الدور، وتخزيناً خاصاً لوثائق التحقق وروابط وصول موقتة. قد يعالج مزودونا البيانات خارج بلدك وفق مواقع بنيتهم التحتية وضماناتهم. لا توجد وسيلة إلكترونية آمنة بنسبة 100%.</p>
+          <p>نستخدم اتصال HTTPS، ومصادقة Firebase بالبريد وكلمة المرور، وصلاحيات وصول حسب الدور، وتخزيناً خاصاً لوثائق التحقق وروابط وصول موقتة، ورمز تحقق لمرة واحدة لتأكيد البريد وإعادة تعيين كلمة المرور. قد يعالج مزودونا البيانات خارج بلدك وفق مواقع بنيتهم التحتية وضماناتهم. لا توجد وسيلة إلكترونية آمنة بنسبة 100%.</p>
         </div>
         <div class="section">
           <h2>11. إشعارات الدفع</h2>
@@ -134,7 +137,8 @@
           <h2>2. Data we collect</h2>
           <ul>
             <li><strong>Account and identity:</strong> name, display name, email address, phone number, Firebase identifier, and a profile image if uploaded.</li>
-            <li><strong>Authentication:</strong> email/password sign-in through Firebase Authentication. We do not store your password in readable form on the app servers.</li>
+            <li><strong>Authentication:</strong> email/password sign-up and sign-in only through Firebase Authentication (no Google or Apple sign-in). We do not store your password in readable form on the app servers.</li>
+            <li><strong>Verification codes (OTP):</strong> when confirming email or resetting a password, we send a 6-digit code to your email via our email delivery provider (Resend). The app does not use separate confirmation links for these flows.</li>
             <li><strong>Activity and content:</strong> favorites, property and publication requests (which may include a property owner name and phone when submitting a publish request), listings and images and optional video links, chats, collaboration opportunities, reports, and support tickets.</li>
             <li><strong>Property or office data:</strong> text address, contact and social links, and an <strong>optional map location</strong> (a map link or coordinates you or the office enter manually to show the property/office location only — see section 4).</li>
             <li><strong>Office ledger:</strong> rent, debt, expense, income, and internally managed property records. These may include a tenant, owner, or buyer name and phone number when an office enters them to manage its business.</li>
@@ -167,8 +171,9 @@
           <p><strong>We do not sell your data or use it for targeted marketing or cross-app tracking.</strong> We may share only what is necessary:</p>
           <ul>
             <li>With users or offices you interact with, or in a listing or office profile you chose to publish (including an optional map location if provided).</li>
-            <li>With administrators reviewing offices, content, reports, and support.</li>
-            <li>With Google Firebase for authentication and notifications.</li>
+            <li>With administrators reviewing offices, content, reports, and support, and when linking an approved office to another account email upon request.</li>
+            <li>With Google Firebase for email/password authentication and notifications.</li>
+            <li>With Resend to deliver verification codes to your email.</li>
             <li>With our hosting provider and Cloudflare when images are stored or delivered through R2/CDN.</li>
             <li>With competent authorities when legally required or necessary to protect rights and safety.</li>
           </ul>
@@ -176,18 +181,19 @@
         <div class="section">
           <h2>7. Public data and your choices</h2>
           <p>Listings, property images, and an office name, logo, address, contact details, and the map location entered for a property or office may be public. Other data is shown only to parties needed for the selected feature. Do not upload documents, images, or personal data about another person unless you are authorized to do so.</p>
+          <p><strong>Changing an approved office email is not available inside the app</strong>; it is handled by administration only after verification, to protect office and listing ownership.</p>
         </div>
         <div class="section">
           <h2>8. Retention and deletion</h2>
-          <p>We retain account data and content while the account is active and as needed to provide the service. Deleting an account removes related account data, content, and media from active systems according to system relationships. Encrypted backups may remain for no more than 30 days. Security logs that may include an IP address and device type are retained for no more than 90 days, then automatically deleted or de-identified. A specific record may be kept longer only for a legal obligation or an ongoing security incident.</p>
+          <p>We retain account data and content while the account is active and as needed to provide the service. Deleting an account removes related account data, content, and media from active systems according to system relationships. Encrypted backups may remain for no more than 30 days. Security logs that may include an IP address and device type are retained for no more than 90 days, then automatically deleted or de-identified. A specific record may be kept longer only for a legal obligation or an ongoing security incident. Verification codes are deleted after use or shortly after they expire.</p>
         </div>
         <div class="section">
           <h2>9. Your rights and account deletion</h2>
-          <p>You can review and update profile data and manage your content. In the app, go to <strong>My Account → Delete account</strong>, type “حذف,” and confirm. This request covers the Firebase account and related service data. You may also use the <a href="delete-account.html">public account-deletion page</a> or email <a href="mailto:info@barzandawood.com">info@barzandawood.com</a>. We may verify account ownership before processing an external request.</p>
+          <p>You can review and update profile data and manage your content. In the app, go to <strong>My Account → Delete account</strong>, type “حذف,” and confirm. This request covers the Firebase account and related service data. You may also use the <a href="delete-account.html">public account-deletion page</a> or email <a href="mailto:info@barzandawood.com">info@barzandawood.com</a>. We may verify account ownership before processing an external request. To keep an office when changing email, contact administration to link it to another account instead of deleting the office.</p>
         </div>
         <div class="section">
           <h2>10. Security and transfers</h2>
-          <p>We use HTTPS, Firebase authentication, role-based access, private storage for verification documents, and time-limited access links. Providers may process data outside your country according to their infrastructure and safeguards. No electronic method is completely secure.</p>
+          <p>We use HTTPS, Firebase email/password authentication, role-based access, private storage for verification documents, time-limited access links, and one-time codes for email confirmation and password reset. Providers may process data outside your country according to their infrastructure and safeguards. No electronic method is completely secure.</p>
         </div>
         <div class="section">
           <h2>11. Push notifications</h2>
